@@ -1,0 +1,11 @@
+# 8. Divide data into 70% training and 30% as testing.  
+from sklearn.model_selection import train_test_split
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size = 0.3, random_state =42)
+
+# X and Y are the arrays or DataFrames representing your input features and target variable, respectively.
+# test_size=0.3 indicates that you want to allocate 30% of the data to the testing set.
+#This means that 70% of the data will be allocated to the training set.
+# random_state=42 sets the random seed to 42, ensuring reproducibility of the split. 
+#This means that each time you run the code with the same random seed, you will obtain the same split.
+# After executing this code, the function will split your data into four arrays or
+#DataFrames: X_train, Y_train, X_test, and Y_test. The training data will be stored in X_train and Y_train, while the testing data will be stored in X_test and Y_test.
