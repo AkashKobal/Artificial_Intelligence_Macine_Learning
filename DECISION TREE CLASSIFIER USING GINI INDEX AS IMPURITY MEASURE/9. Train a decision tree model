@@ -1,0 +1,13 @@
+# 9. Train a decision tree model using Gini INdex and depth of 3
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier(criterion = 'gini', max_depth=3 )
+clf.fit(X_train,Y_train)
+# n this code, you import the DecisionTreeClassifier class from sklearn.tree. 
+#Then, you create an instance of the classifier named clf. The classifier is initialized with the following parameters:
+
+# criterion='gini' sets the criterion used to measure the quality of a split in the decision tree. 
+# The 'gini' criterion refers to the Gini impurity, which is a measure of the node's impurity based on class probabilities. Other supported criteria are 'entropy' for the Shannon information gain and 'log_loss' for logarithmic loss [1].
+# max_depth=3 sets the maximum depth of the decision tree. This parameter limits the number of levels the tree can grow to.
+# In this case, the tree is limited to a depth of 3, meaning it can have at most 3 levels from the root to the leaves [2].
+# Once the classifier is instantiated, you fit it to your training data using clf.fit(X_train, Y_train).
+#This trains the decision tree classifier on the features X_train and their corresponding targets Y_train.
