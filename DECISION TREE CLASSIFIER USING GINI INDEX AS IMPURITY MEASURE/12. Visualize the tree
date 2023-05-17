@@ -1,0 +1,18 @@
+# 12. Visualize the tree using grapghviz and pydotplus libraries
+from sklearn.tree import export_graphviz
+import pydotplus as pdot
+from IPython.display import Image
+export_graphviz(clf,out_file = "tree.odt", feature_names = X_train.columns, filled = True)
+graph = pdot.graphviz.graph_from_dot_file("tree.odt")
+graph.write_jpg("tree.png")
+Image(filename = "tree.png")
+
+# In this code, you perform the following steps:
+
+# Import the necessary modules and functions: export_graphviz from sklearn.tree, pydotplus as pdot, and Image from IPython.display.
+# Call export_graphviz to export the decision tree model (clf) to the GraphViz format.
+#  The out_file parameter specifies the output file name ("tree.odt" in this case), and 
+#  the feature_names parameter provides the names of the features in your dataset.
+# Use graphviz.graph_from_dot_file from pydotplus to create a graph from the exported GraphViz file ("tree.odt").
+# Write the graph to a JPG image file ("tree.png") using write_jpg method of the graph object.
+# Display the image using IPython.display.Image by providing the filename of the image ("tree.png").
