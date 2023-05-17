@@ -1,0 +1,3 @@
+# 7. Make independent features of the encoded frame as X and column 'status' as dependent feature.
+X = encoded_df
+Y = df["status"]
