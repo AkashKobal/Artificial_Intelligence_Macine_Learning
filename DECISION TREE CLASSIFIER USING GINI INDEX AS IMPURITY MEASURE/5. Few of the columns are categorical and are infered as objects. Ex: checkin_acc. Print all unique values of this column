@@ -1,0 +1,10 @@
+# 5. Few of the columns are categorical and are infered as objects. Ex: checkin_acc. Print all unique values of this column
+df["checkin_acc"].unique()
+# The output of the code "df["checkin_acc"].unique()" will depend on the structure and content of the pandas dataframe named "df". Assuming that there is a column named "checkin_acc" 
+#in the dataframe, this code will return an array of unique values that are present in that column. 
+
+# For example, if the "checkin_acc" column contains categorical data related to bank accounts, 
+#such as "no account", "low balance", "medium balance", and "high balance", then the output of this code will be an array containing these unique values.
+
+# This code is useful for exploring the unique values in a column of a dataframe, which can help 
+#in identifying any data quality issues or patterns in the data. It can also be used for data preprocessing tasks such as encoding categorical variables for machine learning models. 
