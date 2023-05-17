@@ -1,0 +1,18 @@
+# 11. Print the confusion matrix, accuracy and AUC score of this model on test set
+from sklearn import metrics
+print("Confusion Matrix is\n",metrics.confusion_matrix(pred_y, y_test))
+print("Accuracy is", metrics.accuracy_score(pred_y,y_test))
+print("AUC Score is", metrics.roc_auc_score(pred_y, y_test))
+
+# confusion_matrix(y_true, y_pred, *, labels=None, sample_weight=None, normalize=None)
+# computes a confusion matrix to evaluate the accuracy of a classification. 
+# It compares the true labels (y_true) with the predicted labels (y_pred) and 
+# provides information about the number of observations known to be in each group and 
+# the number of observations predicted to be in each group
+# accuracy_score(y_true, y_pred) calculates the accuracy of the classification by comparing the true 
+# labels (y_true) with the predicted labels (y_pred).
+# roc_auc_score(y_true, y_score) computes the area under the receiver operating characteristic
+# curve (ROC AUC) for binary classification tasks.
+# It measures the classifier's ability to rank the positive and negative samples correctly [1].
+# By calling these functions with pred_y as the predicted labels and y_test as the true labels, 
+# you can obtain the confusion matrix, accuracy score, and ROC AUC score, respectively. 
