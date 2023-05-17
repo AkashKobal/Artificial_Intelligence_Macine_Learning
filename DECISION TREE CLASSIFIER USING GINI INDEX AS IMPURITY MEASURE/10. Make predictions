@@ -1,0 +1,2 @@
+# 10. Make predictions on test/validation data
+predict_y = clf.predict(X_test)
