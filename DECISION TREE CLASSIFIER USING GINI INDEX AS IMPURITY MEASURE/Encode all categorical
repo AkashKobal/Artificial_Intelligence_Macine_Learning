@@ -1,0 +1,9 @@
+# 6. Encode all categorical features using one-hot encoding. A feature with n values is encoded using (n-1) values, retaining the first one (drop_first = True)
+# First, you have a DataFrame named df, and you want to create a list of column names as X_features, excluding the column named 'status'. To accomplish this, you can use the following code:
+# Next, you want to encode the categorical features in the DataFrame df[X_features] using one-hot encoding. The resulting encoded DataFrame will be stored in encoded_df. To achieve this, you can utilize the pd.get_dummies() function with the drop_first=True parameter, which drops the first category for each feature to avoid multicollinearity:
+# Finally, you can print the list of column names in the encoded_df DataFrame using print(list(encoded_df.columns)):
+# This will display the column names of the encoded DataFrame.
+X_features = list(df.columns) #creating the list of the columns
+X_features.remove('status') #deleting the status column
+encoded_df = pd.get_dummies(df[X_features],drop_first=True) #encoding the feature using get dummies and drop the first values
+print(list(encoded_df.columns)) #printing the result
