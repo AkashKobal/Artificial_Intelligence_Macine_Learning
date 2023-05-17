@@ -1,0 +1,7 @@
+2. Create a Pandas Frame for this file and explore its content
+
+import pandas as pd
+df = pd.read_csv("German Credit Data.csv")
+df.info()
+df.shape
+df.head()
