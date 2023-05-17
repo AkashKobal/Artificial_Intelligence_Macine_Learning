@@ -1,0 +1,10 @@
+# 3. Print the first five records and first 7 columns
+df.iloc[0:5,0:8] #[rows,columns]
+# The code "df.iloc[0:5,0:7]" selects a subset of data from a DataFrame called "df"., 
+#it selects the first 5 rows and the first 7 columns of the DataFrame. 
+
+# The "iloc" method is used to select data based on its integer location. 
+#The first argument "0:5" specifies the range of rows to select, starting from row 0 and ending at row 4 (since the upper limit is not inclusive). The second argument "0:7" specifies the range of columns to select, starting from column 0 and ending at column 6.
+
+# This code can be useful for exploring the structure and contents of a DataFrame, 
+#or for selecting a specific subset of data for further analysis or visualization. Keep in mind that the selected subset of data may not represent the entire dataset, so it's important to consider the context and purpose of the analysis. 
