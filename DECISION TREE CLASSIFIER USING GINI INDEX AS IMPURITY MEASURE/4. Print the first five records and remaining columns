@@ -1,0 +1,2 @@
+# 4. Print the first five records and remaining columns
+df.iloc[0:5,7:15]
